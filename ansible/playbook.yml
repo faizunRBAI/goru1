@@ -2,7 +2,7 @@
 # Thin Ansible orchestrator for EC2.
 # All runtime-specific behavior lives in `runtimes/<runtime>/*.yml.j2` so that
 # editing one language's playbook (e.g. python) cannot affect any other.
-- name: Deploy goru1
+- name: Deploy goru1-feature
   hosts: all
   become: true
   gather_facts: yes
@@ -10,7 +10,7 @@
     ansible_ssh_retries: 5
     app_dir: /opt/app
     app_port: 8080
-    project: 'goru1'
+    project: 'goru1-feature'
     web_server: 'nginx'
     java_version: '21'
 
